@@ -1,0 +1,259 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style media="screen">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            /* background: rgba(0, 0, 0, 0.6); */
+            background: linear-gradient(#f09819, #9b22ea);
+            background-size: cover;
+        }
+
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .shape:first-child {
+            background: linear-gradient(#9b22ea, #bf23f6);
+            left: -80px;
+            top: -80px;
+        }
+
+        .shape:last-child {
+            background: linear-gradient(to right, #ff512f, #f09819);
+            right: -80px;
+            bottom: -80px;
+        }
+
+        form {
+            /* height: 520px;
+            width: 430px;
+            background-color: rgba(255, 255, 255, 0.07);
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px; */
+
+            height: 520px;
+            width: 430px;
+            /* background-color: rgba(255, 255, 255, 0.07); */
+            /* background-color: rgba(0, 0, 0, 0.6); */
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 58%;
+            left: 50%;
+            /* border-radius: 10px; */
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgb(8 7 16 / 60%);
+            padding: 50px 35px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        /* form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        } */
+
+        /* .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        } */
+
+        /* .box h2 {
+            margin: 0 0 30px;
+            padding: 0px;
+            color: #fff;
+            text-align: center;
+        } */
+
+        .box .input-box {
+            position: relative;
+        }
+
+        .box .input-box input {
+            width: 100%;
+            padding: 10px 0px;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box .input-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0px;
+            font-size: 16px;
+            color: #fff;
+            transition: .5s;
+        }
+
+        .box .input-box input:focus~label,
+        .box .input-box input:valid~label {
+            top: -18px;
+            left: 0px;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+        .box input[type="submit"] {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #227be3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .box input[type="submit"]:hover {
+            background-color: #3067b9;
+        }
+
+        .logintxt {
+            /* height: 520px; */
+            width: 430px;
+            /* background-color: rgba(255, 255, 255, 0.07); */
+            background-color: rgb(28 22 22 / 60%);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 9%;
+            left: 50%;
+            /* border-radius: 10px; */
+            /* backdrop-filter: blur(5px); */
+            /* border: 2px solid rgba(255, 255, 255, 0.1); */
+            /* box-shadow: 0 0 40px rgb(8 7 16 / 60%); */
+            padding: 31px 37px;
+            color: white;
+        }
+
+        .logintxt span {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="box">
+        <h2 class="logintxt">
+            <span>Login</span>
+        </h2>
+        <form action="https://sheetdb.io/api/v1/pr5vfse5begaa" method="post" id="sheetdb-form">
+            <div class="input-box">
+                <!-- <label for="Name">Name</label> -->
+                <input type="text" name="data[Name]" placeholder="Enter Name" required>
+            </div>
+            <div class="input-box">
+                <!-- <label for="Phone">Phone</label> -->
+                <input type="text" name="data[Phone]" placeholder="Enter phone number" required>
+            </div>
+            <div class="input-box">
+                <!-- <label for="Email">Email</label> -->
+                <input type="email" name="data[Email]" placeholder="Enter Name" required>
+            </div>
+            <div class="input-box">
+                <!-- <label for="">Domainname</label> -->
+                <input type="text" name="data[Domainname]" placeholder="Enter Domain Name" required>
+            </div>
+            <div class="input-box">
+                <!-- <label for="">Agentname</label> -->
+                <input type="text" name="data[Agentname]" placeholder="Enter Agent Name" required>
+            </div>
+            <div class="input-box">
+                <!-- <label for="">Assignedto</label> -->
+                <input type="text" name="data[Assignedto]" placeholder="Enter Assigned to" required>
+            </div>
+            <input type="submit" value="Submit" name="submit">
+        </form>
+    </div>
+
+
+
+
+    <!-- New script -->
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                // you can put any JS code here
+
+                // window.open('page2.html', '_blank');
+                alert("Thanks for Contacting us..! We Will Contact You Soon...")
+            });
+        });
+    </script>
+    <!-- End script -->
+
+    <!-- https://script.google.com/a/macros/yellomonkey.com/s/AKfycbzyNMJAtBVmZNyEKfZo0qQUe2ymxtQ-qapV4m0vSmmF40jjvVEqfqIgw3evtPyDffJeNw/exec -->
+
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/a/macros/yellomonkey.com/s/AKfycbzyNMJAtBVmZNyEKfZo0qQUe2ymxtQ-qapV4m0vSmmF40jjvVEqfqIgw3evtPyDffJeNw/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script> -->
+
+</body>
+
+</html>
